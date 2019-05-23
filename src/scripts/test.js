@@ -1,0 +1,6 @@
+/**
+ * It works !
+ */
+function test() {
+
+}
