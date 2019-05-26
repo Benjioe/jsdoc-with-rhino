@@ -33,13 +33,13 @@ All parameters are describe on the [jsdoc documentation page](https://jsdoc.app/
 ## Questions And Answers
 **What's Jsdoc ?**
 Jsdoc is a convention to document JavaScript code. It include a tool to generate html documentation.
+- [Jsdoc documentation](https://jsdoc.app/)
+- [github page](https://github.com/jsdoc/jsdoc)
 
-[Jsdoc documentation](https://jsdoc.app/)
-[github page](https://github.com/jsdoc/jsdoc)
 **What's Mozilla Rhino ?**
 Rhino is a JavaScript interpreter base on the JVM. You can mix JavaScript and Java code in the same file.  
-[Mozilla Rhino documentation](https://developer.mozilla.org/fr/docs/Mozilla/Projects/Rhino)
-[github page](https://github.com/mozilla/rhino)
+- [Mozilla Rhino documentation](https://developer.mozilla.org/fr/docs/Mozilla/Projects/Rhino)
+- [github page](https://github.com/mozilla/rhino)
 
 **Why do you use the 3.3.3 version of Jsdoc ?**
 3.3.3 version is the last jsdoc base on Rhino. Without Rhino, any Java instruction could prevent Jsdoc to treat our file.
