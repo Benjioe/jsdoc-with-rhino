@@ -1,8 +1,6 @@
 FROM openjdk:7-alpine
 WORKDIR /usr/src
 
-COPY getting-start/ .
-
 RUN apk update && \
     apk upgrade && \
     apk add git
