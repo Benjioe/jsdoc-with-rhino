@@ -1,8 +1,0 @@
-{
-    "opts": {
-        "template": "./minami",
-        "destination": "./app/out/",
-        "recurse": true,
-        "tutorials": "./tutorials"
-    }
-}

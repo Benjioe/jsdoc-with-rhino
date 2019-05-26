@@ -1,6 +1,0 @@
-/**
- * It works !
- */
-function test() {
-
-}

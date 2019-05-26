@@ -1,13 +1,16 @@
-FROM alpine
+FROM openjdk:7-alpine
 WORKDIR /usr/src
+
+COPY getting-start/ .
 
 RUN apk update && \
     apk upgrade && \
     apk add git
 
 RUN git clone --single-branch --branch releases/3.3 https://github.com/jsdoc/jsdoc.git
-RUN git clone https://github.com/nijikokun/minami.git
 
-COPY ./jsdoc-config.json .
 
-CMD README=/usr/src/app/readme/README.md; if [ -f "$README" ]; then ./jsdoc/jsdoc /usr/src/app/scripts -c ./jsdoc-config.json -T $README else ./jsdoc/jsdoc /usr/src/app/scripts -c ./jsdoc-config.json; fi
+RUN chmod +x ./jsdoc/jsdoc
+
+ENTRYPOINT ["./jsdoc/jsdoc"]
+CMD ["./app", "-r",  "-d",  "./app/out"]
