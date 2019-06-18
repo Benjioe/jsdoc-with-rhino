@@ -10,7 +10,7 @@ mkdir ~/jsdoc && echo "/** a test function */function test() {}" > ~/jsdoc/test.
 
 Launch the image and map this directory to */usr/src/app*.
 ```Shell
-sudo docker run -v ~/jsdoc:/usr/src/app jsdoc-with-rhino
+sudo docker run -v ~/jsdoc:/usr/src/app benjioe14/jsdoc-with-rhino
 ```
 
 The generate html is saved in *~/jsdoc/out*, open it in a browser.
@@ -26,7 +26,7 @@ mkdir c:\jsdoc; echo "/** a test function */function test() {}" > C:\jsdoc\test.
 
 Launch the image and map this directory to */usr/src/app*.
 ```Powershell
-docker run -v c:/jsdoc:/usr/src/app jsdoc-with-rhino
+docker run -v c:/jsdoc:/usr/src/app benjioe14/jsdoc-with-rhino
 ```
 
 The generate html is saved in *D:\jsdoc\out*, open it in a browser.
@@ -38,7 +38,7 @@ start c:\jsdoc\out\index.html
 ### Configure
 You can replace the default jsdoc parameters with your own by putting them a the end of the docker command line. Here we add a readme file :
 ```Shell
-docker run -v c:/jsdoc:/usr/src/app jsdoc-with-rhino -c ./app -r -R  /usr/src/app/README.md
+docker run -v c:/jsdoc:/usr/src/app benjioe14/jsdoc-with-rhino -c ./app -r -R  /usr/src/app/README.md
 ```
 
 All parameters are describe on the [jsdoc documentation page](https://jsdoc.app/about-commandline.html)
