@@ -4,29 +4,42 @@ Jsdoc-with-Rhino is a docker image who generate jsdoc html documentation for Rhi
 ## Usage
 ### Linux (ubuntu)
 Create a directory with some JavaScript file inside.
-`mkdir ~/jsdoc && echo "/** a test function */function test() {}" > ~/jsdoc/test.js` 
+```Shell
+mkdir ~/jsdoc && echo "/** a test function */function test() {}" > ~/jsdoc/test.js
+```
 
 Launch the image and map this directory to */usr/src/app*.
-`sudo docker run -v ~/jsdoc:/usr/src/app jsdoc-with-rhino`
+```Shell
+sudo docker run -v ~/jsdoc:/usr/src/app jsdoc-with-rhino
+```
 
 The generate html is saved in *~/jsdoc/out*, open it in a browser.
-`sensible-browser ~/jsdoc/out/index.html`
-
+```Shell
+sensible-browser ~/jsdoc/out/index.html
+```
 
 ### Windows (powershell)
 Create a directory with some JavaScript file inside.
-`mkdir c:\jsdoc; echo "/** a test function */function test() {}" > C:\jsdoc\test.js` 
+```Powershell
+mkdir c:\jsdoc; echo "/** a test function */function test() {}" > C:\jsdoc\test.js
+```
 
 Launch the image and map this directory to */usr/src/app*.
-`docker run -v c:/jsdoc:/usr/src/app jsdoc-with-rhino`
+```Powershell
+docker run -v c:/jsdoc:/usr/src/app jsdoc-with-rhino
+```
 
 The generate html is saved in *D:\jsdoc\out*, open it in a browser.
-`start D:\jsdoc\out\index.html`
+```Powershell
+start c:\jsdoc\out\index.html
+```
 
 
 ### Configure
 You can replace the default jsdoc parameters with your own by putting them a the end of the docker command line. Here we add a readme file :
-`docker run -v c:/jsdoc:/usr/src/app jsdoc-with-rhino -c ./app -r -R  /usr/src/app/README.md`
+```Shell
+docker run -v c:/jsdoc:/usr/src/app jsdoc-with-rhino -c ./app -r -R  /usr/src/app/README.md
+```
 
 All parameters are describe on the [jsdoc documentation page](https://jsdoc.app/about-commandline.html)
 
