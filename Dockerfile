@@ -1,4 +1,4 @@
-FROM openjdk:7-alpine
+FROM openjdk:8
 WORKDIR /usr/src
 
 RUN apk update && \
